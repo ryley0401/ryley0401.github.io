@@ -151,3 +151,9 @@ h2 {
 .add_room {
   cursor: pointer;
 }
+/*導覽列css*/
+.navbar {
+  padding-top: 10px; /* 上內邊距 */
+  padding-bottom: 10px; /* 下內邊距 */
+  margin-bottom: 20px; /* 下外邊距 */
+}
