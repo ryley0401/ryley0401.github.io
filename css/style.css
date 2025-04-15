@@ -318,7 +318,7 @@ footer .text-center {
 	color:#E8CB49;
 }
 #contactcontent a.btn{
-	color:white;
+	color:rgb(253, 253, 253);
 }
 #contactcontent textarea{
 	height:200px;
@@ -377,4 +377,198 @@ footer .text-center {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     filter: invert(0%) brightness(0); /* 將圖標改為黑色 */
+}
+
+/* 商品展示區域 */
+#second {
+    padding: 80px 0px;
+}
+
+#second h3 {
+    margin-bottom: 70px;
+    font-size: 32px;
+}
+
+#second .self img {
+    object-fit: cover;
+    height: 550px;
+    width: 100%;
+    object-position: 80%;
+}
+
+#second h5 {
+    margin-top: 22px;
+    font-size: 16px;
+}
+
+#second li {
+    position: relative;
+}
+
+#second li::before {
+    content: '';
+    position: absolute;
+    left: -23px;
+    top: 4px;
+    width: 10px;
+    height: 17px;
+    background: #E8CB49;
+    border-radius: 0 100px 100px 0;
+}
+
+/* 商品卡片樣式 */
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: #b12704; /* 價格顏色 */
+    font-weight: bold; /* 加粗價格 */
+}
+
+.color-options span {
+    display: inline-block; /* 顯示為內聯塊 */
+    width: 16px; /* 顏色圓圈寬度 */
+    height: 16px; /* 顏色圓圈高度 */
+    border-radius: 50%; /* 圓形 */
+    margin-right: 4px; /* 間距 */
+}
+
+/* 按鈕樣式 */
+.btn-primary {
+    background-color: #E8CB49; /* 按鈕背景色 */
+    border-color: #E8CB49; /* 按鈕邊框色 */
+}
+
+.btn-primary:hover {
+    opacity: 0.8; /* 懸停時透明度 */
+}
+
+/* 懸停效果 */
+.product-card:hover {
+    transform: translateY(-5px); /* 卡片向上移動 */
+    box-shadow: 0 8px 16px rgba(238, 2, 187, 0.842); /* 添加陰影效果 */
+    background-color: #f9f9f9; /* 改變背景顏色 */
+}
+
+.product-card:hover img {
+    transform: scale(1.05); /* 圖片放大效果 */
+}
+
+.product-card:hover .product-price {
+    color: #0959ee; /* 價格顏色改變 */
+}
+
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000; /* 數字要比 sidebar 的 z-index 大 */
+    background: #fff; /* 建議加背景色，避免透明時內容穿透 */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04); /* 可選，讓header有陰影 */
+}
+
+/*colth.html*/
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    padding: 32px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.product-card-colth {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #0001;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s;
+}
+
+.product-card-colth:hover {
+    box-shadow: 0 4px 16px rgba(9, 187, 231, 0.133);
+}
+
+.product-card-colth img {
+    height: 500px;
+    object-fit: cover;
+    width: 100%;
+    display: block;     
+    border-radius: 12px 12px 0 0; 
+    background: #eee;
+}
+
+.product-info {
+    padding: 16px;
+    width: 100%;
+    text-align: center;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    color: #222;
+    margin-bottom: 6px;
+}
+
+.product-price.special {
+    color: #d32f2f;
+}
+
+.old-price {
+    font-size: 1rem;
+    color: #888;
+    text-decoration: line-through;
+    margin-left: 8px;
+}
+
+.product-rating {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.btn-colth{
+    white-space: normal;
+    word-break: break-all;
+}
+
+.btn-cloth-primary {
+    background-color: #7e63e2;   /* 主色，依你圖片的黃色調整 */
+    color: #ffffff;                 /* 文字顏色 */
+    border: none;
+    border-radius: 18px;         /* 圓角 */
+    box-shadow: 0 2px 8px #0002;/* 陰影 */
+    padding: 10px 16px;
+    font-weight: 500;
+    width: 100%;                 /* 讓按鈕撐滿卡片寬度 */
+    white-space: normal;         /* 允許換行 */
+    word-break: break-all;       /* 長字串也能斷行 */
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.btn-cloth-primary:hover,
+.btn-cloth-primary:focus {
+    background-color: #e28c1c;   /* 懸停時的顏色（較深黃） */
+    box-shadow: 0 4px 16px #0003;/* 懸停時陰影加深 */
+    color: #050505;
+    outline: none;
 }
