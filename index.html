@@ -33,7 +33,7 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">新品上市</a>
+                                    <a class="nav-link active" aria-current="page" href="#" id="newProductLink">新品上市</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">商品分類</a>
@@ -42,7 +42,7 @@
                                         <li><a class="dropdown-item" href="cloth.html">服飾配件</a></li>
                                         <li><a class="dropdown-item" href="shose.html">潮流鞋款</a></li>
                                         <li><hr class="dropdown-divider"></li>
-                                        <li><a class="dropdown-item" href="#">查看所有</a></li>
+                                        <li><a class="dropdown-item" href="all.html">查看所有</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -53,7 +53,13 @@
                         </div>
                     </div>
                 </div>
+                <!--彈出視窗-->
+                <div id="popup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.2); padding:32px 48px; z-index:9999;">
+                    <span id="closePopup" style="position:absolute; top:8px; right:16px; cursor:pointer; font-size:20px;">&times;</span>
+                    <div style="font-size:20px; text-align:center;">敬請期待</div>
+                </div>
             </nav>
+            
         </header>
         <!--下面img/view.jpg以後要自己更換-->
         <section id="intro" style="background: linear-gradient(45deg, rgba(233, 233, 233, 0.9), transparent) 20%, url(img/horizontal.png) no-repeat center;background-size: cover;">
@@ -285,6 +291,15 @@
             </div>
         </div>
         </footer>
+        <script>
+            document.getElementById('newProductLink').addEventListener('click', function(event) {
+                event.preventDefault();
+                document.getElementById('popup').style.display = 'block';
+            });
+            document.getElementById('closePopup').addEventListener('click', function() {
+                document.getElementById('popup').style.display = 'none';
+            });
+        </script>
     </body>
 </html>
 
